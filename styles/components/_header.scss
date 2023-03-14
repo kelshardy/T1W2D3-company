@@ -1,11 +1,12 @@
 @import "../defaults.color";
 @import "./utils";
+@import "../defaults/breakpoint";
 
 header {
     @include background-stuff();
 
     .logo-name {
-        @media screen and (max-width: 600px) {
+        @media screen and (max-width: $medium) {
             margin-bottom: 24px;
         }
 

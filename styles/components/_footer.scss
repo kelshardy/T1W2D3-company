@@ -1,5 +1,6 @@
 @import "../defaults/color";
 @import "./utils";
+@import "../defaults/breakpoint";
 
 footer {
     @include background-stuff();
@@ -27,7 +28,7 @@ footer {
     }
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: $medium) {
     footer {
         .social-media {
             width: 50%;
