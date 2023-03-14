@@ -1,0 +1,56 @@
+@import "../defaults.color";
+@import "./utils";
+
+header {
+    @include background-stuff();
+
+    .logo-name {
+        @media screen and (max-width: 600px) {
+            margin-bottom: 24px;
+        }
+
+        .name {
+            font-size: 28px;
+
+            .coder-text {
+                color: $primary-color;
+            }
+
+            .academy-text {
+                color: $secondary-color;
+            }
+        }
+    }
+
+    .nav-items {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        font-size: 18px;
+
+        a {
+            text-decoration: none;
+            color: #00a3d4;
+        }
+    }
+}
+
+@media screen and (min-width: 600px) {
+    header {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+
+        .logo-name {
+            // margin-bottom: 0; this will be taken care in mobile view
+
+            .name {
+                margin-bottom: 0;
+            }
+        }
+
+        .nav-items {
+            width: 50%;
+        }
+    }
+}
